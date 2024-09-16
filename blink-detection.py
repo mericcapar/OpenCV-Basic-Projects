@@ -5,7 +5,7 @@ from cvzone.PlotModule import LivePlot
 import mediapipe as mp 
 
 
-cap = cv2.VideoCapture('blink2.mp4')
+cap = cv2.VideoCapture(0)
 detector = FaceMeshDetector()
 plotY = LivePlot(640,360,[20,50])
 
@@ -55,8 +55,6 @@ while True:
             dl = 0
             color = (255 , 0 , 255)
         
-        
-
         imgPlot = plotY.update(ratioAvg, color)
 
         #cv2.imshow("imgPlot", imgPlot)
